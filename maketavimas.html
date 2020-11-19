@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/konva@7.1.8/konva.min.js"></script>
+    <meta charset="utf-8"/>
+    <title>Konva Drag and Drop Multiple Shapes Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<script>
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+
+    var stage = new Konva.Stage({
+        container: 'container',
+        width: width,
+        height: height,
+    });
+
+    function spawnImage(layer, imagePath, x, y, draggable = false) {
+        let imageObj = new Image();
+        imageObj.onload = () => {
+            let image = new Konva.Image({
+                x: x,
+                y: y,
+                image: imageObj,
+                draggable: draggable,
+                width: 50,
+                height: 50,
+            });
+
+            if (draggable) {
+                image.on('dragstart', function () {
+                    this.moveToTop();
+                    layer.draw();
+                });
+
+                image.on('dragmove', function () {
+                    document.body.style.cursor = 'pointer';
+                });
+                
+                image.on('dblclick dbltap', function () {
+                    this.destroy();
+                    layer.draw();
+                });
+            } else {
+                image.on('click', () => {
+                    spawnImage(layer, imagePath, width / 2, height / 2, true);
+                })
+            }
+
+            image.on('mouseover', function () {
+                document.body.style.cursor = 'pointer';
+            });
+            image.on('mouseout', function () {
+                document.body.style.cursor = 'default';
+            });
+
+            layer.add(image);
+            layer.batchDraw();
+        }
+        imageObj.src = 'images/' + imagePath;
+    }
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+    let images = ['bush1.png', 'flowers1.png', 'flowers2.png', 'plant1.png', 'plant2.png', 'plant3.png', 'tree1.png'];
+    for (let i = 0; i < images.length; i++) {
+        spawnImage(layer, images[i], 50, i * 75 + 40, false);
+    }
+</script>
+</body>
+</html>
