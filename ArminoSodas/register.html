@@ -1,21 +1,56 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
-        integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js"
-        integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD"
-        crossorigin="anonymous"></script>
-    <!-- Font Awesome -->
-    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+  <!-- MDB -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
     <meta charset="UTF-8">
+    <style>
+        .createNewStyle {
+            background-color: #55d6aa;
+            color: black;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .text-sodas {
+            color : #55d6aa;
+        }
+
+        .bg-sodas {
+            background : #55d6aa;
+        }
+
+        .btn-sodas {
+            background : #55d6aa;
+            color : white;
+        }
+
+            nav a {
+            transition: 0.3s ease;
+            }
+            nav a:hover {
+            border-top: 4px solid white;
+            color : white;
+            }
+            .navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,1);
+}
+            .navbar-dark .navbar-nav .nav-link {
+            color: rgba(255,255,255,.75);
+        }
+
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-gradient fixed-top" style="background: rgba(76, 175, 80, 0.7);">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-sodas fixed-top">
+        <div class="container">
             <a class="navbar-brand" href="index.html">Tavo sodas</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
                 aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -34,11 +69,11 @@
                                 d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
                         </svg>
                     </button>
-                    <ul class="dropdown-menu p-3 bg-light position-sticky">
+                    <ul class="dropdown-menu p-3 bg-light">
                         <!-- Dropdown menu links -->
-                        <a class="btn btn-success w-100 mb-2" style="padding-right:-5px ;"
+                        <a class="btn btn-sodas w-100 mb-2" style="padding-right:-5px ;"
                             href="login.html">Prisijungti</a>
-                        <a class="btn btn-success w-100 m-auto" href="register.html">Registruotis</a>
+                        <a class="btn btn-sodas w-100 m-auto" href="register.html">Registruotis</a>
                     </ul>
                 </div>
 
@@ -50,7 +85,7 @@
     <div class="container">
         <br> <br> <br>
         <div class="card">
-            <div class="card-header text-white" style="background: rgba(76, 175, 80, 0.7);">Registracija</div>
+            <div class="card-header text-white bg-sodas">Registracija</div>
             <div class="card-body m-2 p-5">
                 <form action="index_logged_in.php" method="GET">
                     <!-- Email input -->
@@ -74,7 +109,7 @@
                         <div class="col d-flex justify-content-center">
                             <!-- Checkbox -->
                             <div class="form-check">
-                                <input class="form-check-input bg-success outline-success" type="checkbox" value=""
+                                <input class="form-check-input bg-sodas outline-sodas" type="checkbox" value=""
                                     id="form2Example3" checked />
                                 <label class="form-check-label " for="form2Example3">
                                     Remember me
@@ -82,34 +117,34 @@
                             </div>
                         </div>
 
-                        <div class="col text-success">
+                        <div class="col text-sodas">
                             <!-- Simple link -->
-                            <a href="#!" class="text-success">Pamiršote slaptažodį?</a>
+                            <a href="#!" class="text-sodas">Pamiršote slaptažodį?</a>
                         </div>
                     </div>
 
                     <!-- Submit button -->
-                    <button type="submit" class="btn btn-success btn-block mb-4">
+                    <button type="submit" class="btn btn-sodas btn-block mb-4">
                         Registruotis
                     </button>
 
                     <!-- Register buttons -->
                     <div class="text-center">
-                        <p>Esamas narys? <a href="login.html" class="text-success">Prisijungti</a></p>
+                        <p>Esamas narys? <a href="login.html" class="text-sodas">Prisijungti</a></p>
                         <p>arba prisijungti su:</p>
-                        <button type="button" class="btn btn-success btn-floating mx-1">
+                        <button type="button" class="btn btn-sodas btn-floating mx-1">
                             <i class="fab fa-facebook-f"></i>
                         </button>
 
-                        <button type="button" class="btn btn-success btn-floating mx-1">
+                        <button type="button" class="btn btn-sodas btn-floating mx-1">
                             <i class="fab fa-google"></i>
                         </button>
 
-                        <button type="button" class="btn btn-success btn-floating mx-1">
+                        <button type="button" class="btn btn-sodas btn-floating mx-1">
                             <i class="fab fa-twitter"></i>
                         </button>
 
-                        <button type="button" class="btn btn-success btn-floating mx-1">
+                        <button type="button" class="btn btn-sodas btn-floating mx-1">
                             <i class="fab fa-github"></i>
                         </button>
                     </div>
@@ -123,8 +158,8 @@
 <footer class="bg-light text-center text-lg-left fixed-bottom">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color:#e0e0e0;">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        © 2020 Copyright: 
+        <a class="text-dark" href="https://github.com/vytasgavelis/tavo_sodas">Tavo sodas</a>
     </div>
     <!-- Copyright -->
 </footer>
