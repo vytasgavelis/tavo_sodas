@@ -1,0 +1,204 @@
+
+
+body {
+	color: #000000; /* teksto spalva */
+    font-family: Arial, Helvetica, sans-serif; /* šriftas */
+    font-size: 12px; /* teksto dydis */
+    background-color: #ffffff; /* fono spalva*/
+    margin: 0;
+}
+
+main {
+    height: 200px;
+    width: 65%;
+	padding: 0px 20px 20px 20px;
+	margin: auto;
+    /*top: 0;*/
+}
+
+.nav {
+    height: 50px;
+    width: 100%;
+    background-color: #55d6ab;
+    /*float: left;*/
+    top: 0;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.nav img {
+	width: 15%;
+    margin-right: 15px;
+    float: left;
+}
+
+
+.menu {
+    width: 100%;
+    height: 40px;
+    float: left;
+    background-color: #c9c9c9;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.menu img {
+	width: 2.5%;
+    margin-right: 15px;
+    /*float: left;*/
+	margin-left: 15px;
+}
+
+
+
+/* Nuo ekrano kaires puses 20% nutole*/
+
+
+.menu img:hover {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* main puslapio content kazkas */
+#content {
+    /*padding-left: 20px;
+    padding-bottom: 20px;*/
+    padding: 10px 20px 20px 20px;
+    font-size: 16px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: #ebebeb;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#maketas {
+	width: 70%;
+	height: 500px;
+	margin: auto;
+	margin-top: 5%;
+	border: 3px solid black;
+}
+
+/*====================== kairysis iconu pasirinkimu menu ======================*/
+
+
+#side-panel {
+	width: 10%;
+	float: left;
+	background-color: #c9c9c9;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-top: 3%;
+}
+
+.grid-container {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0px;
+	border: 1px solid black;
+    /*background-color: #2196F3;*/
+}
+
+.grid-item {
+    background-color: #c9c9c9;
+    height: 50px;
+    cursor: pointer;
+    text-align: center;
+	border: 1px solid black;
+}
+
+.grid-item:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/*======================== Maketas ==========================*/
+
+#maketas-screen {
+	
+}
+
+/*========================  ==========================*/
+.image {
+	width: 10%;
+}
+
+/*======================== main lango pasirinkimu langai ==========================*/
+
+.window {
+	width: 95%;
+	margin: auto;
+	padding: 1%;
+	margin-top: 30px;
+	background-color: #ffffff;
+	overflow: hidden;
+}
+
+.window img {
+	width: 40%;
+    margin-left: 15px;
+    float: right;
+}
+
+.window h3,
+.window p{
+    margin-right: 15px;
+    display: block;
+    margin: 2px 0 0 0;
+	text-align: center;
+}
+
+.window button{
+    transition-duration: 0.1s;
+    background-color: #ffcc54;
+    border: 2px solid #ffcc54;
+    color: white;
+    padding: 4px 8px;
+    text-align:center;
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-top:50px;
+	margin-left: 25%;
+	justify-content: center;
+}
+
+
+/*Mygtukas kai ant jo uzveda*/
+.window button:hover{
+    background-color: white;
+    color: black;
+}
+
+/*===================== navigacijos juostos mygtukai ==================*/
+
+.btn-group .button {
+  background-color: #55d6ab;
+  border: none;
+  border-left: 1px solid #48b892;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  float: right;
+}
+
+
+.btn-group .button:hover {
+  background-color: #ffcc54/*#3e8e41*/;
+}
+
+/*============= tiesiog header ====================*/
+.header {
+	font-size: 35px;
+    font-weight: bold;
+	text-align: center;
+}
+
+
+/*=========================*/
+
+
+
+
