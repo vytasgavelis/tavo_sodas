@@ -3,7 +3,7 @@
 <head>
     <script src="https://unpkg.com/konva@7.1.8/konva.min.js"></script>
     <meta charset="utf-8"/>
-    <title>Konva Drag and Drop Multiple Shapes Demo</title>
+    <title>Tavo sodas</title>
     <style>
         body {
             margin: 0;
@@ -12,20 +12,55 @@
             background-color: #f0f0f0;
         }
     </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
 </head>
 <body>
-<div id="container"></div>
+<div class="nav">
+    <img src="Nedo%20sodas/images/Logo1.png"/ alt="" >
+    <div class="btn-group">
+        <button class="button">Registruotis</button>
+        <button class="button">Prisijungti</button>
+    </div>
+</div>
+
+<div class="menu">
+    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
+    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
+    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
+</div>
+
+
+<div id="side-panel">
+    <div class="grid-container">
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
+        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+    </div>
+</div>
+
+<div id="maketas">
+
+</div>
+</body>
+</html>
 <script>
-    var width = window.innerWidth;
-    var height = window.innerHeight;
+    // var width = window.innerWidth;
+    // var height = window.innerHeight;
+    let width = 1050;
+    let height = 500;
 
     var stage = new Konva.Stage({
-        container: 'container',
+        container: 'maketas',
         width: width,
         height: height,
     });
 
     function spawnImage(layer, imagePath, x, y, draggable = false) {
+        console.log('spawn');
         let imageObj = new Image();
         imageObj.onload = () => {
             let image = new Konva.Image({
@@ -67,15 +102,23 @@
             layer.add(image);
             layer.batchDraw();
         }
-        imageObj.src = 'images/' + imagePath;
+        imageObj.src = imagePath;
     }
 
     var layer = new Konva.Layer();
     stage.add(layer);
-    let images = ['bush1.png', 'flowers1.png', 'flowers2.png', 'plant1.png', 'plant2.png', 'plant3.png', 'tree1.png'];
-    for (let i = 0; i < images.length; i++) {
-        spawnImage(layer, images[i], 50, i * 75 + 40, false);
-    }
+
+    let toolboxItems = document.querySelectorAll('[data-toolbox-item]');
+    let gardenWindow = document.getElementById('maketas');
+    let x = gardenWindow.getBoundingClientRect().x;
+    let y = gardenWindow.getBoundingClientRect().y;
+    toolboxItems.forEach(item => {
+        item.addEventListener('click', () => {
+            // console.log(x + width / 2);
+            // console.log(y + height / 2);
+            spawnImage(layer, item.firstChild.src, x + width / 2, y + height / 2, true);
+        });
+    })
 </script>
-</body>
-</html>
+
+
