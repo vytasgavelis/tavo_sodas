@@ -36,14 +36,39 @@
 
 
 <div id="side-panel">
-    <div class="grid-container">
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
-        <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
-    </div>
+	<button type="button" class="collapsible">Krumai</button>
+	<div class="content">
+		<div class="grid-container">
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+		</div>
+	</div>
+	<button type="button" class="collapsible">Medziai</button>
+	<div class="content">
+		<div class="grid-container">
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+		</div>
+	</div>
+	<button type="button" class="collapsible">Augalai</button>
+	<div class="content">
+		<div class="grid-container">
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+		</div>
+	</div>
 </div>
 
 <div id="maketas">
@@ -123,6 +148,23 @@
             spawnImage(layer, item.firstChild.src, x + width / 2, y + height / 2, true);
         });
     })
+	
+	
+	//Maketo sonas
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 </script>
 
 

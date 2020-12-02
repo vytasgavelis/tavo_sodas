@@ -22,8 +22,9 @@
 		<img src="images/cursor.png"/ alt="" >
 	</div>
 	
-	
-		<div id="side-panel">
+	<div id="side-panel">
+		<button type="button" class="collapsible">Krumai</button>
+		<div class="content">
 			<div class="grid-container">
 				<div class="grid-item">1</div>
 				<div class="grid-item">2</div>  
@@ -33,13 +34,51 @@
 				<div class="grid-item">6</div>
 			</div>
 		</div>
-		
-		<div id="maketas">
-			
+		<button type="button" class="collapsible">Medziai</button>
+		<div class="content">
+			<div class="grid-container">
+				<div class="grid-item">1</div>
+				<div class="grid-item">2</div>  
+				<div class="grid-item">3</div>  
+				<div class="grid-item">4</div>
+				<div class="grid-item">5</div>
+				<div class="grid-item">6</div>
+			</div>
 		</div>
-		
-		
+		<button type="button" class="collapsible">Zole</button>
+		<div class="content">
+			<div class="grid-container">
+				<div class="grid-item">1</div>
+				<div class="grid-item">2</div>  
+				<div class="grid-item">3</div>  
+				<div class="grid-item">4</div>
+				<div class="grid-item">5</div>
+				<div class="grid-item">6</div>
+			</div>
+		</div>
+	</div>
 	
+	<div id="maketas">
+		
+	</div>
+		
+		
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
 	
 	
 </body>
