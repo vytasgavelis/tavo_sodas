@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="nav">
-    <img src="Nedo%20sodas/images/Logo1.png"/ alt="" >
+	<a href="index.html"><img src="Nedo%20sodas/images/Logo1.png"/ alt="" ></a>
     <div class="btn-group">
         <button class="button">Registruotis</button>
         <button class="button">
@@ -29,9 +29,15 @@
 </div>
 
 <div class="menu">
-    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
-    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
-    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >
+<!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+<!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+<!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+	<span>Spalva:</span>
+	<span class="color-option green" data-attr-color="#25851c"></span>
+	<span class="color-option yellow" data-attr-color="#ebba34"></span>
+	<span class="color-option blue" data-attr-color="#3489eb"></span>
+	<span class="color-option white" data-attr-color="#e0e0e0"></span>
+	<span class="color-option brown" data-attr-color="#8a5d0b"></span>
 </div>
 
 
@@ -39,34 +45,34 @@
 	<button type="button" class="collapsible">Krumai</button>
 	<div class="content">
 		<div class="grid-container">
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(1).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(2).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(3).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(4).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(5).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(6).png"></div>
 		</div>
 	</div>
 	<button type="button" class="collapsible">Medziai</button>
 	<div class="content">
 		<div class="grid-container">
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(1).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(2).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(3).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(4).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(5).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(6).png"></div>
 		</div>
 	</div>
 	<button type="button" class="collapsible">Augalai</button>
 	<div class="content">
 		<div class="grid-container">
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/flowers1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant1.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant2.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant3.png"></div>
-			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(1).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(2).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(3).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(4).png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/flowers1.png"></div>
+			<div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/flowers2.png"></div>
 		</div>
 	</div>
 </div>
@@ -143,13 +149,19 @@
     let y = gardenWindow.getBoundingClientRect().y;
     toolboxItems.forEach(item => {
         item.addEventListener('click', () => {
-            // console.log(x + width / 2);
-            // console.log(y + height / 2);
             spawnImage(layer, item.firstChild.src, x + width / 2, y + height / 2, true);
         });
     })
-	
-	
+
+
+	// Spalvos keitimas
+	let colorPickers = document.querySelectorAll('[data-attr-color]');
+    colorPickers.forEach(picker => {
+    	picker.addEventListener('click', () => {
+			gardenWindow.style.backgroundColor = picker.dataset.attrColor;
+		});
+	});
+
 	//Maketo sonas
 var coll = document.getElementsByClassName("collapsible");
 var i;
