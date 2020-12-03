@@ -76,8 +76,36 @@ main {
 	margin: auto;
 	margin-top: 5%;
 	border: 3px solid black;
+    background-color: #25851c;
 }
 
+.color-option {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.color-option.white {
+    background-color: #e0e0e0;
+}
+
+.color-option.green {
+    background-color: #25851c;
+}
+
+.color-option.yellow {
+    background-color: #ebba34;
+}
+
+.color-option.blue {
+    background-color: #3489eb;
+}
+
+.color-option.brown {
+     background-color: #8a5d0b;
+}
 
 /*====================== Kairysis section collapse/expand =====================*/
 .collapsible {
