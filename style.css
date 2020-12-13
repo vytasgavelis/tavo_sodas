@@ -110,7 +110,11 @@ main {
 	margin: auto;
 	margin-top: 5%;
 	border: 3px solid black;
-    background-color: #25851c;
+    /*background-color: #25851c;*/
+    background-size: 40px 40px;
+    background-image:
+            linear-gradient(to right, grey 1px, transparent 1px),
+            linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
 .color-option {

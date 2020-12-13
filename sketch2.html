@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/konva@7.1.8/konva.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/1.0.0/mdb.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="utf-8"/>
+    <title>Tavo sodas</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0f0f0;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-gradient fixed-top" style="background:#55d6aa;">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Tavo sodas</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link " href="import_template.html"><svg width="1.2em" height="1.2em"
+                                                                          viewBox="0 0 16 16" class="bi bi-file-arrow-up-fill" fill="currentColor"
+                                                                          xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM7.5 6.707V10.5a.5.5 0 0 0 1 0V6.707l1.146 1.147a.5.5 0 0 0 .708-.708l-2-2a.5.5 0 0 0-.708 0l-2 2a.5.5 0 1 0 .708.708L7.5 6.707z" />
+                    </svg>Importuoti maketa</a>
+                </li>
+            </ul>
+            <div class="btn-group dropdown">
+                <button type="button" class="btn dropdown-toggle text-white" data-toggle="dropdown"
+                        aria-expanded="false">
+                    <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-person-dash-fill"
+                         fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                              d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5-.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
+                    </svg>
+                </button>
+                <ul class="dropdown-menu p-3 bg-light">
+                    <!-- Dropdown menu links -->
+                    <a class="btn btn-sodas w-100 mb-2"
+                       href="login.html">Prisijungti</a>
+                    <a class="btn btn-sodas w-100 m-auto" href="register.html">Registruotis</a>
+                </ul>
+            </div>
+
+
+
+        </div>
+    </div>
+</nav>
+
+<div class="menu">
+    <!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+    <!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+    <!--    <img src="Nedo%20sodas/images/cursor.png"/ alt="" >-->
+    <span>Spalva:</span>
+    <span class="color-option green" data-attr-color="#25851c"></span>
+    <span class="color-option yellow" data-attr-color="#ebba34"></span>
+    <span class="color-option blue" data-attr-color="#3489eb"></span>
+    <span class="color-option white" data-attr-color="#e0e0e0"></span>
+    <span class="color-option brown" data-attr-color="#8a5d0b"></span>
+</div>
+
+
+<div id="side-panel">
+    <button type="button" class="collapsible">Krumai</button>
+    <div class="content">
+        <div class="grid-container">
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(1).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(2).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(3).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(4).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(5).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/bush/bush(6).png"></div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Medziai</button>
+    <div class="content">
+        <div class="grid-container">
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(1).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(2).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(3).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(4).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(5).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/tree/tree(6).png"></div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Augalai</button>
+    <div class="content">
+        <div class="grid-container">
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(1).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(2).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(3).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/plant(5).png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/flowers1.png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/plant/flowers2.png"></div>
+        </div>
+    </div>
+    <button type="button" class="collapsible">Zeme/Vanduo</button>
+    <div class="content">
+        <div class="grid-container">
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/ground/ground1.png"></div>
+            <div class="grid-item" data-toolbox-item><img class="plant-image" src="images/water/water.jpg"></div>
+        </div>
+    </div>
+</div>
+
+<div id="maketas">
+
+</div>
+</body>
+</html>
+<script>
+    // var width = window.innerWidth;
+    // var height = window.innerHeight;
+    let width = 1050;
+    let height = 500;
+
+    var stage = new Konva.Stage({
+        container: 'maketas',
+        width: width,
+        height: height,
+    });
+
+    function spawnImage(layer, imagePath, x, y, draggable = false) {
+        let imageObj = new Image();
+        imageObj.onload = () => {
+            let image = new Konva.Image({
+                x: x,
+                y: y,
+                image: imageObj,
+                draggable: draggable,
+                width: 50,
+                height: 50,
+            });
+
+            if (draggable) {
+                image.on('dragstart', function () {
+                    this.moveToTop();
+                    layer.draw();
+                });
+
+                image.on('dragmove', function () {
+                    document.body.style.cursor = 'pointer';
+                });
+
+                image.on('dblclick dbltap', function () {
+                    this.destroy();
+                    layer.draw();
+                });
+
+            } else {
+                image.on('click', () => {
+                    spawnImage(layer, imagePath, width / 2, height / 2, true);
+                })
+            }
+
+            image.on('mouseover', function () {
+                document.body.style.cursor = 'pointer';
+            });
+            image.on('mouseout', function () {
+                document.body.style.cursor = 'default';
+            });
+
+            layer.add(image);
+            layer.batchDraw();
+        }
+        imageObj.src = imagePath;
+    }
+
+    var layer = new Konva.Layer();
+    stage.add(layer);
+
+    let toolboxItems = document.querySelectorAll('[data-toolbox-item]');
+    let gardenWindow = document.getElementById('maketas');
+    let x = gardenWindow.getBoundingClientRect().x;
+    let y = gardenWindow.getBoundingClientRect().y;
+    toolboxItems.forEach(item => {
+        item.addEventListener('click', () => {
+            spawnImage(layer, item.firstChild.src, x + width / 2, y + height / 2, true);
+        });
+    })
+
+
+    // Spalvos keitimas
+    let colorPickers = document.querySelectorAll('[data-attr-color]');
+    colorPickers.forEach(picker => {
+        picker.addEventListener('click', () => {
+            gardenWindow.style.backgroundColor = picker.dataset.attrColor;
+        });
+    });
+
+    gardenWindow.style.backgroundColor = "#8a5d0b";
+
+    //Maketo sonas
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    }
+
+    // Sugeneruojam pasirinkta maketa
+    for (i = 0; i < 6; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 300 + i * 30, 255, true);
+    }
+    for (i = 0; i < 6; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 300 + i * 30, 440, true);
+    }
+    for (i = 0; i < 3; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 250, 300 + i * 40, true);
+    }
+    for (i = 0; i < 3; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 500, 300 + i * 40, true);
+    }
+
+    for (i = 0; i < 6; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 300 + i * 30, 300, true);
+    }
+    for (i = 0; i < 6; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 300 + i * 30, 350, true);
+    }
+    for (i = 0; i < 6; i++) {
+        spawnImage(layer, "images/plant/plant(5).png", 300 + i * 30, 400, true);
+    }
+
+</script>
+
+
